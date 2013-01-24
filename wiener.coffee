@@ -51,31 +51,32 @@ class event_gender
     $('#stats_female').html(@female)
 
   @render: ->
-    html = '<li class="uiListItem uiListLight uiListVerticalItemBorder">
-    <ul class="uiList uiListHorizontal clearfix">
-        <li class="prs uiListItem uiListLight uiListHorizontalItemBorder uiListHorizontalItem">
-            <div class="clearfix pvm prm">
-                <div class="fbInfoIcon lfloat">
-                    <i class="img gender_icon spin" title="Females" style="display:inline-block;height:10px;width:10px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM3MUQ3N0QwMkJDMzExRTFBMDZEOTkyREM0NDhDQjFEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM3MUQ3N0QxMkJDMzExRTFBMDZEOTkyREM0NDhDQjFEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzcxRDc3Q0UyQkMzMTFFMUEwNkQ5OTJEQzQ0OENCMUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzcxRDc3Q0YyQkMzMTFFMUEwNkQ5OTJEQzQ0OENCMUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7JwWsmAAAAG1BMVEWkpKTHx8fj4+Px8fGdnZ34+PjV1dWrq6v////p2CD9AAAAOElEQVR42mSLWwoAIAzD6mNb7n9inQqC9iOE0gosZgwE4eCxFRYevYN507lBqclU73K+lmbJIcAAm3QCxIbmdfUAAAAASUVORK5CYII=);">
-                        <u>Females</u>
-                    </i>
-                </div>
-                <div class="lfloat" id="stats_female">...</div>
-            </div>
-        </li>
-        <li class="prs uiListItem uiListLight uiListHorizontalItemBorder uiListHorizontalItem">
-            <div class="clearfix pvm">
-                <div class="fbInfoIcon lfloat">
-                    <i class="img gender_icon spin" title="Males" style="display:inline-block;height:10px;width:10px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUwQTBFODkzMkJDMzExRTFBOUFBOUFBNENCQzNENDA4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUwQTBFODk0MkJDMzExRTFBOUFBOUFBNENCQzNENDA4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTBBMEU4OTEyQkMzMTFFMUE5QUE5QUE0Q0JDM0Q0MDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTBBMEU4OTIyQkMzMTFFMUE5QUE5QUE0Q0JDM0Q0MDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7VXAIjAAAAJFBMVEXAwMDq6urOzs7c3NzHx8ekpKTj4+OdnZ25ubn4+Pirq6v///+k93TOAAAARElEQVR42jzMSRLAMAgDQWyHReL//w1QTrjQhwHJf+RuUj4uZ/EoPXwVTZEZ0W1YB94k5qwpuwRtghumZ/7i4fSvAAMAzBEDmokwAngAAAAASUVORK5CYII=);">
-                        <u>Males</u>
-                    </i>
-                </div>
-                <div class="lfloat" id="stats_male">...</div>
-            </div>
-        </li>
-    </ul>
+    html = '<li class="prs uiListItem">
+      <div class="clearfix pvm">
+        <div class="fbInfoIcon lfloat">
+          <i class="img gender_icon spin" title="Females" style="display:inline-block;height:10px;width:10px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM3MUQ3N0QwMkJDMzExRTFBMDZEOTkyREM0NDhDQjFEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM3MUQ3N0QxMkJDMzExRTFBMDZEOTkyREM0NDhDQjFEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzcxRDc3Q0UyQkMzMTFFMUEwNkQ5OTJEQzQ0OENCMUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzcxRDc3Q0YyQkMzMTFFMUEwNkQ5OTJEQzQ0OENCMUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7JwWsmAAAAG1BMVEWkpKTHx8fj4+Px8fGdnZ34+PjV1dWrq6v////p2CD9AAAAOElEQVR42mSLWwoAIAzD6mNb7n9inQqC9iOE0gosZgwE4eCxFRYevYN507lBqclU73K+lmbJIcAAm3QCxIbmdfUAAAAASUVORK5CYII=);">
+              <u>Females</u>
+          </i>
+        </div>
+        <div class="lfloat" id="stats_female">...</div>
+      </div>
+    </li>
+    <li class="pls uiListItem">
+      <div class="clearfix pvm">
+        <div class="fbInfoIcon lfloat">
+            <i class="img gender_icon spin" title="Males" style="display:inline-block;height:10px;width:10px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUwQTBFODkzMkJDMzExRTFBOUFBOUFBNENCQzNENDA4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUwQTBFODk0MkJDMzExRTFBOUFBOUFBNENCQzNENDA4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTBBMEU4OTEyQkMzMTFFMUE5QUE5QUE0Q0JDM0Q0MDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTBBMEU4OTIyQkMzMTFFMUE5QUE5QUE0Q0JDM0Q0MDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7VXAIjAAAAJFBMVEXAwMDq6urOzs7c3NzHx8ekpKTj4+OdnZ25ubn4+Pirq6v///+k93TOAAAARElEQVR42jzMSRLAMAgDQWyHReL//w1QTrjQhwHJf+RuUj4uZ/EoPXwVTZEZ0W1YB94k5qwpuwRtghumZ/7i4fSvAAMAzBEDmokwAngAAAAASUVORK5CYII=);">
+              <u>Males</u>
+          </i>
+        </div>
+        <div class="lfloat" id="stats_male">...</div>
+      </div>
     </li>'
-    $('#contentArea .fbEventInfo .uiList li.uiListVerticalItemBorder:first-child').after(html)
+    old_location = $('#contentArea .fbEventInfo .uiList li li:first-child')
+    if (old_location.length)
+      old_location.after(html)
+    else
+      $('#contentArea .fbEventInfo ul.uiList.-cx-PRIVATE-uiList__horiz li.pls').removeClass('pls').addClass('prs')
+      $('#contentArea .fbEventInfo ul.uiList.-cx-PRIVATE-uiList__horiz').append(html)
 
     html = '<style>
     @-webkit-keyframes spin {
@@ -88,7 +89,7 @@ class event_gender
     }
     </style>'
     $('head').append(html)
-      
+
   # Require an access token, render the UI, get the attendees and subsequently their gender.
   @init: ->
     if @pathname isnt window.location.pathname
