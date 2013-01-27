@@ -1,4 +1,6 @@
 {
+	"manifest_version": 2,
+	
   "name": "Facebook Event Gender Count",
   "version": "0.1",
   "description": "This Chrome extension tells you how much bros and hoes are attending a Facebook event.",
@@ -7,7 +9,7 @@
     "matches": ["https://www.facebook.com/*"],
     "js": ["jquery.1.7.1.js", "wiener.js"]
   }],
-  "permissions": ["https://www.facebook.com"],
+  "permissions": ["https://www.facebook.com/"],
   "icons": {
     "16": "icons/icon16.png",
     "48":  "icons/icon48.png",
